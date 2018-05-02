@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-TARGET=Dropbox/encrypted
+TARGET=Dropbox
 SOURCEBASE=~/virtual/dropbox-common/
 SOURCE="${SOURCEBASE}${TARGET}"
 DESTHOST="chris@localhost"
