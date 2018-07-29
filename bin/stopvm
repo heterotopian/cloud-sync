@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+VMNAME=dropbox-vm
+
+vboxmanage controlvm "${VMNAME}" acpipowerbutton
