@@ -5,11 +5,11 @@ SOURCE="${SOURCEBASE}${TARGET}"
 DEST="${DESTHOST}:${DESTBASE}${TARGET}"
 
 upload_vm () {
-    rsync -e "ssh -p 2222" -apP --del "${SOURCE}/" "${DEST}"
+    rsync -e "ssh -p ${DESTPORT}" -apP --del "${SOURCE}/" "${DEST}"
 }
 
 run_dropbox () {
-    ssh -p 2222 -q chris@localhost <<'EOF'
+    ssh -p "${DESTPORT}" -q "${DESTHOST}" <<'EOF'
     dropbox running || { dropbox stop; pgrep -f dropbox | xargs -r kill; }
     dropbox start 2> /dev/null
     STATUS=$(dropbox status)
