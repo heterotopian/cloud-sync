@@ -1,10 +1,7 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
-TARGET=Dropbox
-SOURCEBASE=~/virtual/dropbox-common/
+source .env
 SOURCE="${SOURCEBASE}${TARGET}"
-DESTHOST="chris@localhost"
-DESTBASE=/home/chris/
 DEST="${DESTHOST}:${DESTBASE}${TARGET}"
 
 upload_vm () {
