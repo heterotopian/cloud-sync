@@ -3,6 +3,11 @@
 Cloud-sync
 ==========
 
+Sync content in the local filesystem to Dropbox *without* installing the Dropbox client on the local host.
+Uses the Dropbox client running in an isolated VM.
+Files are copied into the VM using SFTP.  
+
+
 Environment variables
 =====================
 
