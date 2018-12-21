@@ -22,5 +22,5 @@ DESTHOST
     SFTP server user@host
 
 DESTPORT
-
     SFTP server port
+    
