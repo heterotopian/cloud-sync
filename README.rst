@@ -18,8 +18,11 @@ Environment variables
 ``DESTBASE``
     Path to root of sync destination, in remote SFTP filesystem
 
+``DESTUSER``
+    SFTP username
+
 ``DESTHOST``
-    SFTP server user@host
+    SFTP server
 
 ``DESTPORT``
-    SFTP server port
+    SFTP port

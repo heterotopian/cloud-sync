@@ -2,14 +2,15 @@
 
 source .env
 SOURCE="${SOURCEBASE}${TARGET}"
-DEST="${DESTHOST}:${DESTBASE}${TARGET}"
+DESTSERVER="${DESTUSER}@${DESTHOST}"
+DESTSYNC="${DESTSERVER}:${DESTBASE}${TARGET}"
 
 upload_vm () {
-    rsync -e "ssh -p ${DESTPORT}" -apP --del "${SOURCE}/" "${DEST}"
+    rsync -e "ssh -p ${DESTPORT}" -apP --del "${SOURCE}/" "${DESTSYNC}"
 }
 
 run_dropbox () {
-    ssh -p "${DESTPORT}" -q "${DESTHOST}" <<'EOF'
+    ssh -p "${DESTPORT}" -q "${DESTSERVER}" <<'EOF'
     dropbox running || { dropbox stop; pgrep -f dropbox | xargs -r kill; }
     dropbox start 2> /dev/null
     STATUS=$(dropbox status)
