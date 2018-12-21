@@ -6,21 +6,20 @@ Cloud-sync
 Environment variables
 =====================
 
-VMNAME
+``VMNAME``
     Virtual machine name
 
-TARGET
+``TARGET``
     Name of directory to sync
 
-SOURCEBASE
+``SOURCEBASE``
     Path to root of sync content, in local filesystem
 
-DESTBASE
+``DESTBASE``
     Path to root of sync destination, in remote SFTP filesystem
 
-DESTHOST
+``DESTHOST``
     SFTP server user@host
 
-DESTPORT
+``DESTPORT``
     SFTP server port
-    
