@@ -18,10 +18,10 @@ Environment variables
     Name of directory to sync
 
 ``SOURCEBASE``
-    Path to root of sync content, in local filesystem
+    Path to source sync root, in local filesystem
 
 ``DESTBASE``
-    Path to root of sync destination, in remote SFTP filesystem
+    Path to destination sync root, in remote SFTP filesystem
 
 ``DESTUSER``
     SFTP username
